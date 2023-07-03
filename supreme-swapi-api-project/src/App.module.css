@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Nanum+Gothic+Coding&display=swap');
+
+
+section {
+  margin: 1rem auto;
+  width: 90%;
+  /* max-width: 40rem; */
+  text-align: center;
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.main-image {
+  width: 100%;
+  height: 25rem;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+
+
+button {
+  margin-top: 8px;
+  font: inherit;
+  cursor: pointer;
+  background: #080808;
+  border: 1px solid #EC9F05;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background-color: #EC9F05;
+  border-color: #EC9F05;
+}

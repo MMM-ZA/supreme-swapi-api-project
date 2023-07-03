@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Nanum+Gothic+Coding&display=swap');
+
+
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+  font-family:'Nanum Gothic Coding', monospace;
 }
 
 body {
   margin: 0;
-  background-color: #272727;
+  background-color: #080808;
 }
