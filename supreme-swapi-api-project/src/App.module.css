@@ -22,16 +22,6 @@ section {
   background-position: center;
 }
 
-section .list-section h2 {
-  font-size: 14px;
-  font-family: 'Dela Gothic One', cursive;
-    color: #fff;
-    text-shadow: 2px 2px 0px #080808,
-      4px 4px 0px #080808,
-      5px 5px 0px #080808,
-      6px 6px 0px #080808;
-}
-
 
 button {
   margin-top: 8px;
