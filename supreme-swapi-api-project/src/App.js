@@ -22,17 +22,29 @@ function App() {
 
       const data = await response.json();
 
+      const loadedMovies = [];
 
-      const transformedData = data.results.map((movieData) => {
-        return {
-          id: movieData.episode_id,
-          title: movieData.title,
-          openingText: movieData.opening_crawl,
-          releaseDate: movieData.release_date,
-        };
-      });
+      for (const key in data) {
+        loadedMovies.push({
+          id: key,
+          title: data[key].title,
+          openingText: data[key].openingText,
+          releaseDate: data[key].releaseDate,
+        });
+      }
 
-      setMovies(transformedData);
+      setMovies(loadedMovies);
+
+      // const transformedData = data.map((movieData) => {
+      //   return {
+      //     id: movieData.episode_id,
+      //     title: movieData.title,
+      //     openingText: movieData.opening_crawl,
+      //     releaseDate: movieData.release_date,
+      //   };
+      // });
+
+      // setMovies(transformedData);
 
     } catch (error) {
       // Handle error if the fetch or JSON parsing fails
@@ -45,11 +57,18 @@ function App() {
   FetchMoviesHandler();
  },[FetchMoviesHandler])
 
- function addMovieHandler(movie) {
-    fetch('https://react-swapi-project-default-rtdb.firebaseio.com', {
+ async function addMovieHandler(movie) {
+    const response = await fetch('https://react-swapi-project-default-rtdb.firebaseio.com/movies.json', {
       method: 'POST',
-      body: JSON.stringify(movie)
+      body: JSON.stringify(movie),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
+
+  const data = await response.json();
+  console.log(data);
+
   }
 
   return (
