@@ -10,6 +10,10 @@ section {
   padding: 2rem;
   border-radius: 12px;
 }
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
 
 .main-image {
   width: 100%;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import StarWars from '../src/assets/StarWarsPoster.png'
+import Logo from '../src/assets/logo.svg'
+// import Film from '../src/assets/film.svg'
 import MoviesList from './components/MoviesList';
 import classes from './App.module.css';
 import AddMovie from './components/AddMovie';
@@ -75,8 +77,14 @@ function App() {
     <React.Fragment>
       <section>
         <header>
+          <div className={classes.navbar}>
+            <img src={Logo} alt=''></img>
+          </div>
           <div className={classes['main-image']}>
          <img src={StarWars} alt='Star wars logo'/>
+         <div>
+         <a href="src/components/MoviesList.js">Film</a>
+         </div>
          </div>
         </header>
         <section>
