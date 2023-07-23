@@ -2,19 +2,20 @@
 
 
 section {
-  margin: 1rem auto;
-  width: 90%;
-  /* max-width: 40rem; */
+  width: 100%;
   text-align: center;
-  background-color: #1f1f1f;
+  background-color: #080808;
   padding: 2rem;
   border-radius: 12px;
 }
 .navbar {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 2rem;
+  height: 5rem;
 }
-.navlinks {
+.navlinks a {
   color: #fff;
   text-decoration: none;
 }
@@ -30,8 +31,7 @@ section {
   background-position: center;
 }
 
-
-button {
+.navlinks button {
   margin-top: 8px;
   font: inherit;
   cursor: pointer;
@@ -40,6 +40,26 @@ button {
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 20px;
+}
+.navlinks:hover {
+  border-color: #fff;
+    background: #080808;
+}
+
+button {
+  width: 8.5rem;
+  height: 3rem;
+  margin-top: 8px;
+  font: inherit;
+  cursor: pointer;
+  background: #080808;
+  border: 1px solid #EC9F05;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+  padding: 2px;
+
 }
 
 button:focus {

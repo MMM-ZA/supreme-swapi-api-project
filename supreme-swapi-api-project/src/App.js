@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import classes from './App.module.css';
 import StarWars from '../src/assets/StarWarsPoster.png'
+import StarWars2 from '../src/assets/StarWarsposter2.png'
+import StarWars3 from '../src/assets/StarWarsPoster3.png'
 import Logo from '../src/assets/logo.svg'
 import AddFavorites from './components/AddFavorites';
 
 
 function App() {
   const [showFavorites, setShowFavorites] = useState(false);
+  const intervalTime = 3000;
+  const [currentImage,setCurrentImage] = useState(StarWars);
+
+   useEffect(() => {
+      const images = [StarWars, StarWars2, StarWars3];
+
+    const changeImage = () => {
+      const currentIndex = images.indexOf(currentImage);
+      const nextIndex = (currentIndex + 1) % images.length;
+      setCurrentImage(images[nextIndex]);
+    };
+
+     const intervalId = setInterval(changeImage, intervalTime);
+
+    return () => clearInterval(intervalId);
+  }, [currentImage, intervalTime]);
 
   const handleShowFavorites = () => {
     setShowFavorites(true);
   };
 
+   const handleLogo = () => {
+    window.location.href = 'app.js';
+  };
 
 
   return (
@@ -20,7 +41,7 @@ function App() {
       <section>
         <header>
           <div className={classes.navbar}>
-            <img src={Logo} alt='Star wars logo'></img>
+            <img src={Logo} alt='Star wars logo' onClick={handleLogo}></img>
             <div className={classes.navlinks}>
               <a href="/films"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"></path></svg>Films</a>
              <a href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><circle cx="10" cy="8" r="4"></circle><path d="M10.35 14.01C7.62 13.91 2 15.27 2 18v2h9.54c-2.47-2.76-1.23-5.89-1.19-5.99zM19.43 18.02c.36-.59.57-1.28.57-2.02 0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4c.74 0 1.43-.22 2.02-.57L20.59 22 22 20.59l-2.57-2.57zM16 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>Characters</a>
@@ -36,7 +57,7 @@ function App() {
       ) : (
         <section>
           <div className={classes['main-image']}>
-            <img src={StarWars} alt='Star wars poster' />
+            <img src={currentImage} alt='Star wars poster' />
           </div>
         </section>
       )}
