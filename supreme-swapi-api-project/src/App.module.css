@@ -14,10 +14,19 @@ section {
   justify-content: space-between;
   padding: 0px 2rem;
   height: 5rem;
+
+}
+.clickableLinks {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
 }
 .navlinks a {
   color: #fff;
   text-decoration: none;
+  margin: 2rem 2rem;
+
 }
 
 .main-image {
