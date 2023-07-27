@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const CharacterList = () => {
+const Characters = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const CharacterList = () => {
   );
 };
 
-export default CharacterList;
+export default Characters;
