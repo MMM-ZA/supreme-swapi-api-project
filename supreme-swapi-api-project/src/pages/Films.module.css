@@ -1,5 +1,87 @@
+* {
+
+  list-style-type: none;
+}
+
 .FilmsContainer {
   margin: 0;
-  background-color: rgb(48, 44, 44);
-  color: yellow
+  background-color: #080800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+
+.detailItem {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 10px;
+  width: 30rem;
+  height: 36rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url('../assets/starrybackground.png');
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+  transition: transform .6s 1s;
+
+}
+
+.detailItem:before,
+.detailItem::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.detailItem::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+
+/*
+.label {
+
+}
+
+.value {
+
+} */

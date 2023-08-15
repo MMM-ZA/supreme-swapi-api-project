@@ -7,21 +7,26 @@ const FilmsDetails = ({ data }) => {
     { label: 'Title', value: data.title },
     { label: 'Director', value: data.director },
     { label: 'Release Date', value: data.release_date },
-    { label: 'Characters', value: data.characters }
+    { label: 'Opening Crawl ', value: data.opening_crawl }
 
 
   ];
 
   const FilmsList = filmsData.map((item) => (
+    <div className={classes.wrap}>
     <div className={classes.detailItem} key={item.label}>
       <span className={classes.label}>{item.label}:</span>
       <span className={classes.value}>{item.value}</span>
+      <span className={classes.value}>{item.value}</span>
+    </div>
     </div>
   ));
 
   return (
     <div className={classes.FilmsContainer}>
+
       {FilmsList}
+
     </div>
   );
 };
@@ -50,7 +55,7 @@ const Films = () => {
         <p>Loading...</p>
       ) : (
         <div>
-          <h1>Star Wars Characters</h1>
+          <h1>Star Wars Films</h1>
           <ul>
             {films.map((film) => (
               <li key={film.title}>
