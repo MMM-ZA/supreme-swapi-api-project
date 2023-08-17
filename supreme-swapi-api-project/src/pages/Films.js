@@ -4,10 +4,10 @@ import classes from './Films.module.css';
 
 const FilmsDetails = ({ data }) => {
   const filmsData = [
-    { label: 'Title', value: data.title },
-    { label: 'Director', value: data.director },
-    { label: 'Release Date', value: data.release_date },
-    { label: 'Opening Crawl ', value: data.opening_crawl }
+    { label: 'Title', title: data.title },
+    { label: 'Director', director: data.director },
+    { label: 'Release Date', date: data.release_date },
+    { label: 'Opening Crawl ', opening: data.opening_crawl }
 
 
   ];
@@ -15,18 +15,17 @@ const FilmsDetails = ({ data }) => {
   const FilmsList = filmsData.map((item) => (
     <div className={classes.wrap}>
     <div className={classes.detailItem} key={item.label}>
-      <span className={classes.label}>{item.label}:</span>
-      <span className={classes.value}>{item.value}</span>
-      <span className={classes.value}>{item.value}</span>
+      <span className={classes.title}>{item.title}</span>
+      <span className={classes.director}>{item.director}</span>
+      <span className={classes.filmDate}>{item.date}</span>
+      <span className={classes.openingCrawl}>{item.opening}</span>
     </div>
     </div>
   ));
 
   return (
     <div className={classes.FilmsContainer}>
-
       {FilmsList}
-
     </div>
   );
 };
@@ -42,7 +41,7 @@ const Films = () => {
         setFilms(response.data.results);
         setIsLoading(false);
       } catch (error) {
-        console.error('Error fetching characters:', error);
+        console.error('Error fetching films:', error);
       }
     };
 

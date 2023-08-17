@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';  // Import Routes from react-router-dom
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Films from './pages/Films';
 import Characters from './pages/Characters';
 import Starships from './pages/Starships';
