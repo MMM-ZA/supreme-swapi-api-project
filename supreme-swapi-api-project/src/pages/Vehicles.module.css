@@ -1,0 +1,10 @@
+.FilmsContainer {
+  margin: 0;
+  background-color: #080800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
