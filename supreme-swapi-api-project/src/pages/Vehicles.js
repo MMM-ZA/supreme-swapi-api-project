@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import classes from '../pages/Vehicles.module.css';
+import classes from './Vehicles.module.css';
 
 
 const VehiclesDetails = ({ data }) => {
@@ -56,7 +56,7 @@ const Vehicles = () => {
       <p>Loading ...</p>
     ) : (
     <div>
-      <h1>Star Wars Films</h1>
+      <h1>Star Wars Vehicles</h1>
           <ul>
             {vehicles.map((vehicle) => (
               <li key={vehicle.name}>
