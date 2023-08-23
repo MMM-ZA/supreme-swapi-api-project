@@ -9,8 +9,6 @@ const VehiclesDetails = ({ data }) => {
     { label: 'Model', model: data.model },
     { label: 'Passengers', passengers: data.passengers },
     { label: 'Length ', length: data.length }
-
-
   ];
 
   const VehiclesList = vehiclesData.map((item) => (

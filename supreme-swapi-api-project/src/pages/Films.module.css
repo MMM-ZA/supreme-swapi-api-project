@@ -22,7 +22,7 @@
 }
 
 
-.detailItem {
+.wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3px;
@@ -73,8 +73,10 @@
 }
 
 .title {
- font-size: 18px;
- font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-weight: 900;
 }
 
 /* .director {

@@ -14,12 +14,12 @@ const FilmsDetails = ({ data }) => {
 
   const FilmsList = filmsData.map((item) => (
     <div className={classes.wrap}>
-    <div className={classes.detailItem} key={item.label}>
+      <div className={classes.detailItem} key={item.label}>
       <span className={classes.title}>{item.title}</span>
       <span className={classes.director}>{item.director}</span>
       <span className={classes.filmDate}>{item.date}</span>
       <span className={classes.openingCrawl}>{item.opening}</span>
-    </div>
+      </div>
     </div>
   ));
 
