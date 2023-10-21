@@ -51,11 +51,13 @@ const Characters = () => {
       ) : (
         <div>
           <h1>Star Wars Characters</h1>
-          <ul>
+          <ul className={classes.MainWrapper}>
             {characters.map((character) => (
+              <div className={classes.CharacterWrapper}>
               <li key={character.name}>
                 <CharacterDetails data={character} />
               </li>
+              </div>
             ))}
           </ul>
         </div>

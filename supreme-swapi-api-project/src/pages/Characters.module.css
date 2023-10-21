@@ -1,7 +1,50 @@
 .CharactersContainer {
-margin: 0;
-background-color: #080808;
-color: yellow
+ margin: 0;
+ background-color: #080808;
+ color: #EC9F05;
 
+}
 
+.CharactersContainer h1 {
+  text-align: center;
+}
+
+.MainWrapper {
+  display: flex;
+ -webkit-box-align: start;
+ -ms-flex-align: start;
+ align-items: flex-start;
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+ padding: 50px 0;
+ margin: 0 50px;
+}
+
+.CharacterWrapper {
+ display:flex;
+ padding: 20px 0;
+ width: 250px;
+ overflow: hidden;
+ border: 1px solid #EC9F05;
+ margin: 0 15px 20px;
+ border-radius: 28px;
+}
+
+.CharacterWrapper li {
+ display: block;
+ padding: 30px 30px;
+ overflow: hidden;
+ position: relative;
+ font-weight: 300;
+ font-size: 18px;
+
+}
+
+.CharacterWrapper:hover {
+ background-color: #EC9F05;
+}
+
+.CharacterWrapper li :hover {
+  color: #fff;
+  background-color: yellow;
 }

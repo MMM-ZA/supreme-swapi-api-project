@@ -1,22 +1,22 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-const Starships = () => {
+// const Starships = () => {
 
-  useEffect(() => {
-    const fetchStarships = async () => {
-
-
-
-    }
+//   useEffect(() => {
+//     const fetchStarships = async () => {
 
 
+
+//     }
 
 
 
 
-   }[],)
 
 
-};
+//    }[],)
 
-export default Starships;
+
+// };
+
+// export default Starships;
