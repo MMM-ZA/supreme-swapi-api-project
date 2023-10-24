@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
 .CharactersContainer {
  margin: 0;
  background-color: #080808;
@@ -6,7 +9,14 @@
 }
 
 .CharactersContainer h1 {
+  font-family: 'Star Wars', sans-serif;
   text-align: center;
+}
+
+.CharactersContainer p {
+  font-family: 'Star Wars', sans-serif;
+  text-align: center;
+  font-size: 18px;
 }
 
 .MainWrapper {
@@ -22,15 +32,14 @@
 
 .CharacterWrapper {
  display:flex;
- padding: 20px 0;
+ padding: 5px 0;
  width: 250px;
  overflow: hidden;
  border: 1px solid #EC9F05;
  margin: 0 15px 20px;
- border-radius: 28px;
 }
 
-.CharacterWrapper li {
+.detailItem {
  display: block;
  padding: 30px 30px;
  overflow: hidden;
@@ -40,11 +49,17 @@
 
 }
 
-.CharacterWrapper:hover {
- background-color: #EC9F05;
+.label {
+  font-size: 20px;
+  font-weight: 400;
+}
+.value {
+  font-family: 'DO Futuristic', sans-serif;
+  font-size: 18px;
+
 }
 
-.CharacterWrapper li :hover {
-  color: #fff;
-  background-color: yellow;
+.CharacterWrapper:hover {
+  border: 3px solid #EC9F05;
+  transform: scale(1.1);
 }

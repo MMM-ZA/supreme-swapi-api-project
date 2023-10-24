@@ -55,11 +55,13 @@ const Films = () => {
       ) : (
         <div>
           <h1>Star Wars Films</h1>
-          <ul>
+          <ul className={classes.MainWrapper}>
             {films.map((film) => (
+              <div className={classes.FilmsWrapper}>
               <li key={film.title}>
                 <FilmsDetails data={film} />
               </li>
+              </div>
             ))}
           </ul>
         </div>

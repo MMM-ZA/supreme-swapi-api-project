@@ -2,23 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import classes from './Vehicles.module.css';
 
-
 const VehiclesDetails = ({ data }) => {
   const vehiclesData = [
-    { label: 'Name', name: data.name },
-    { label: 'Model', model: data.model },
-    { label: 'Passengers', passengers: data.passengers },
-    { label: 'Length ', length: data.length }
+    { label: "Name:", value: data.name, className: classes.nameLabel },
+    { label: "Model:", value: data.model, className: classes.modelLabel },
+    { label: "Passengers:", value: data.passengers, className: classes.passengersLabel },
+    { label: "Length:", value: data.length, className: classes.lengthLabel}
   ];
 
   const VehiclesList = vehiclesData.map((item) => (
-    <div className={classes.wrap}>
-    <div className={classes.detailItem} key={item.label}>
-      <span className={classes.name}>{item.name}</span>
-      <span className={classes.model}>{item.model}</span>
-      <span className={classes.passengers}>{item.passengers}</span>
-      <span className={classes.length}>{item.length}</span>
-    </div>
+    <div className={classes.wrap} key={item.label}>
+      <div className={classes.detailItem}>
+        <span className={item.label}>{item.label}</span>
+        <span className={classes.value}>{item.value}</span>
+      </div>
     </div>
   ));
 
@@ -55,11 +52,13 @@ const Vehicles = () => {
     ) : (
     <div>
       <h1>Star Wars Vehicles</h1>
-          <ul>
+          <ul className={classes.MainWrapper}>
             {vehicles.map((vehicle) => (
+              <div className={classes.VehiclesWrapper}>
               <li key={vehicle.name}>
                 <VehiclesDetails data={vehicle} />
               </li>
+              </div>
             ))}
           </ul>
     </div>
