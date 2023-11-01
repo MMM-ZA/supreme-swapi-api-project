@@ -4,17 +4,17 @@ import classes from './Vehicles.module.css';
 
 const VehiclesDetails = ({ data }) => {
   const vehiclesData = [
-    { label: "Name:", value: data.name, className: classes.nameLabel },
-    { label: "Model:", value: data.model, className: classes.modelLabel },
-    { label: "Passengers:", value: data.passengers, className: classes.passengersLabel },
-    { label: "Length:", value: data.length, className: classes.lengthLabel}
+    { label: "Name: ", value: data.name, labelClassName: classes.nameLabel, valueClassName: classes.nameValue },
+    { label: "Model: ", value: data.model, labelClassName: classes.modelLabel, valueClassName: classes.modelValue },
+    { label: "Passengers: ", value: data.passengers, labelClassName: classes.passengersLabel, valueClassName: classes.passengersValue },
+    { label: "Length: ", value: data.length, labelClassName: classes.lengthLabel, valueClassName: classes.lengthValue }
   ];
 
-  const VehiclesList = vehiclesData.map((item) => (
-    <div className={classes.wrap} key={item.label}>
+  const VehiclesList = vehiclesData.map((item, index) => (
+    <div className={classes.wrap} key={index}>
       <div className={classes.detailItem}>
-        <span className={item.label}>{item.label}</span>
-        <span className={classes.value}>{item.value}</span>
+        <span className={item.labelClassName}>{item.label}</span>
+        <span className={item.valueClassName}>{item.value}</span>
       </div>
     </div>
   ));

@@ -4,23 +4,25 @@ import classes from './Starships.module.css';
 
 
 
-  const StarshipDetails = ({data}) => {
-    const starshipsData = [
-    { label: "Name:", value: data.name, className: classes.nameLabel },
-    { label: "Model:", value: data.model, className: classes.modelLabel },
-    { label: "Cargo Capacity:", value: data.cargo_capacity, className: classes.cargoLabel },
-    { label: "Hyperdrive Rating:", value: data.hyperdrive_rating, className: classes.hyperdriveLabel},
-    { label: "Megalight per Hour (MGLT):", value: data.MGLT, className: classes.mgltLabel}
+const StarshipDetails = ({ data }) => {
+  const starshipsData = [
+    { label: "Name: ", value: data.name, labelClassName: classes.nameLabel, valueClassName: classes.nameValue },
+    { label: "Model: ", value: data.model, labelClassName: classes.modelLabel, valueClassName: classes.modelValue },
+    { label: "Cargo Capacity: ", value: data.cargo_capacity, labelClassName: classes.cargoLabel, valueClassName: classes.cargoValue },
+    { label: "Hyperdrive Rating: ", value: data.hyperdrive_rating, labelClassName: classes.hyperdriveLabel, valueClassName: classes.hyperdriveValue },
+    { label: "Megalight per Hour (MGLT): ", value: data.MGLT, labelClassName: classes.mgltLabel, valueClassName: classes.mgltValue }
   ];
 
-   const StarshipsList = starshipsData.map((item) => (
-    <div className={classes.wrap} key={item.label}>
+  const StarshipsList = starshipsData.map((item, index) => (
+    <div className={classes.wrap} key={index}>
       <div className={classes.detailItem}>
-        <span className={item.label}>{item.label}</span>
-        <span className={classes.value}>{item.value}</span>
+        <span className={item.labelClassName}>{item.label}</span>
+        <span className={item.valueClassName}>{item.value}</span>
       </div>
     </div>
   ));
+
+
 
 
   return (
@@ -28,8 +30,8 @@ import classes from './Starships.module.css';
       {StarshipsList}
     </div>
   );
+};
 
-   };
 
 
  const Starships = () => {
@@ -56,7 +58,7 @@ import classes from './Starships.module.css';
       <p>Loading ...</p>
     ) : (
     <div>
-      <h1>Star Wars Starships</h1>
+      <h1>Star Wars Spaceships</h1>
           <ul className={classes.MainWrapper}>
             {starships.map((starship) => (
               <div className={classes.StarshipsWrapper}>

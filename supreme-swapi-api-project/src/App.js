@@ -9,6 +9,7 @@ import classes from './App.module.css';
 import StarWars from '../src/assets/StarWarsPoster.png';
 import StarWars2 from '../src/assets/StarWarsposter2.png';
 import StarWars3 from '../src/assets/StarWarsPoster3.png';
+import StarWars4 from '../src/assets/StarWarsPoster4..png';
 import Logo from '../src/assets/logo.svg';
 import AddFavorites from './components/AddFavorites';
 
@@ -18,7 +19,7 @@ function App() {
   const [currentImage, setCurrentImage] = useState(StarWars);
 
   useEffect(() => {
-    const images = [StarWars, StarWars2, StarWars3];
+    const images = [StarWars, StarWars2, StarWars3, StarWars4];
 
     const changeImage = () => {
       const currentIndex = images.indexOf(currentImage);

@@ -1,0 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+* {
+  list-style-type: none;
+}
+
+.StarshipsContainer {
+  margin: 0;
+  background-color: #080808;
+  color: #EC9F05;
+
+}
+
+.StarshipsContainer p {
+  font-family: 'Star Wars', sans-serif;
+  text-align: center;
+  font-size: 18px;
+
+}
+
+.StarshipsContainer h1 {
+  font-family: 'Star Wars', sans-serif;
+  text-align: center;
+}
+
+.MainWrapper {
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  margin: 0 50px;
+}
+
+.StarshipsWrapper {
+  display: flex;
+  padding: 5px 0;
+  width: 30%;
+  overflow: hidden;
+  border: 1px solid #EC9F05;
+  margin: 0 15px 20px;
+}
+
+.detailItem {
+  display: block;
+  padding: 30px 30px;
+  overflow: hidden;
+  position: relative;
+  font-weight: 300;
+  font-size: 18px;
+
+}
+
+.nameValue{
+    font-family: 'Star Wars', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+.modelValue {
+  font-family: 'DO Futuristic', sans-serif;
+  font-size: 18px;
+
+}
+
+.StarshipsWrapper:hover {
+  border: 3px solid #EC9F05;
+  transform: scale(1.1);
+}
+
+.name :hover {
+  text-decoration: double;
+}
