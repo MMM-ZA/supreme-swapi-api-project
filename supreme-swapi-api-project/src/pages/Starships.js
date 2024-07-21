@@ -58,7 +58,7 @@ const StarshipDetails = ({ data }) => {
       <p>Loading ...</p>
     ) : (
     <div>
-      <h1>Star Wars Spaceships</h1>
+      <h1>Star Wars  Spaceships</h1>
           <ul className={classes.MainWrapper}>
             {starships.map((starship) => (
               <div className={classes.StarshipsWrapper}>

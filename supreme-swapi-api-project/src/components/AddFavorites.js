@@ -36,7 +36,7 @@ const [movies, setMovies] = useState([]);
 
 
     } catch (error) {
-      // Handle error if the fetch or JSON parsing fails
+      
       setError(error.message)
     }
     setIsLoading(false);

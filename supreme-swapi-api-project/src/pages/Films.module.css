@@ -17,11 +17,16 @@
   text-align: center;
   font-size: 18px;
 
+
 }
 
 .FilmsContainer h1 {
   font-family: 'Star Wars', sans-serif;
   text-align: center;
+}
+
+.openingCrawl {
+  color: #fff; 
 }
 
 .MainWrapper {
@@ -42,6 +47,7 @@
   overflow: hidden;
   border: 1px solid #EC9F05;
   margin: 0 15px 20px;
+  box-shadow: 0 0 15px rgba(236, 159, 5, 0.6); 
 }
 
 .detailItem {
@@ -65,6 +71,7 @@
   font-size: 18px;
 
 }
+
 
 .FilmsWrapper:hover {
   border: 3px solid #EC9F05;

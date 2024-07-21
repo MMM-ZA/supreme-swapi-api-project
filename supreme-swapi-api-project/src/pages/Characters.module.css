@@ -37,6 +37,7 @@
  overflow: hidden;
  border: 1px solid #EC9F05;
  margin: 0 15px 20px;
+ box-shadow: 0 0 15px rgba(236, 159, 5, 0.6); 
 }
 
 .detailItem {

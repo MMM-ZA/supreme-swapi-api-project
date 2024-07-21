@@ -7,8 +7,8 @@ const CharacterDetails = ({ data }) => {
     { label: 'Name', value: data.name },
     { label: 'Gender', value: data.gender },
     { label: 'Birth Year', value: data.birth_year },
-    { label: 'Height', value: data.eye_color },
-    { label: 'Eye Color', value: data.height }
+    { label: 'Height', value: data.height },
+    { label: 'Eye Color', value: data.eye_color }
 
   ];
 

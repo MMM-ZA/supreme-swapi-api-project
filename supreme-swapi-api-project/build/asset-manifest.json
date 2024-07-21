@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3fed2af.css",
+    "main.js": "/static/js/main.c010daa7.js",
+    "static/media/StarWarsPoster.png": "/static/media/StarWarsPoster.ce51188cde428dc83e70.png",
+    "static/media/StarWarsPoster3.png": "/static/media/StarWarsPoster3.21727f14d02fb946a340.png",
+    "static/media/StarWarsposter2.png": "/static/media/StarWarsposter2.48bce2b6776a502965bd.png",
+    "static/media/StarWarsPoster4..png": "/static/media/StarWarsPoster4..bff9c13b12846d56ad7e.png",
+    "static/media/logo.svg": "/static/media/logo.b2c9fb82b8ed3cc3e77082992c0efee9.svg",
+    "index.html": "/index.html",
+    "main.e3fed2af.css.map": "/static/css/main.e3fed2af.css.map",
+    "main.c010daa7.js.map": "/static/js/main.c010daa7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3fed2af.css",
+    "static/js/main.c010daa7.js"
+  ]
+}

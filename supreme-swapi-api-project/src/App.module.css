@@ -26,8 +26,25 @@ section {
   color: #fff;
   text-decoration: none;
   margin: 2rem 2rem;
-
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+  0 0 20px rgba(255, 215, 0, 0.6),
+  0 0 30px rgba(255, 215, 0, 0.4),
+  0 0 40px rgba(255, 215, 0, 0.2);
+transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
+
+.navlinks a:hover {
+color:  #EC9F05; 
+transform: scale(1.1); 
+text-shadow: 0 0 20px rgba(255, 255, 0, 0.8),
+  0 0 30px rgba(255, 255, 0, 0.6),
+  0 0 40px rgba(255, 255, 0, 0.4),
+  0 0 50px rgba(255, 255, 0, 0.2);
+}
+
+
+
+
 
 .main-image {
   width: 100%;
