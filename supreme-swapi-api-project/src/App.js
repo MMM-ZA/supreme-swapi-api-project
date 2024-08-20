@@ -55,7 +55,7 @@ function App() {
                   <Link to="/vehicles">Vehicles</Link>
                 </div>
               </div>
-              <button onClick={handleShowFavorites}>Add Favorites</button>
+              {/* <button onClick={handleShowFavorites}>Add Favorites</button> */}
             </div>
           </header>
         </section>
