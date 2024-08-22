@@ -18,3 +18,37 @@
   margin: 0;
   font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+  .movie {
+    margin: 0.75rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .movie h2 {
+    font-size: 1.75rem;
+  }
+
+  .movie h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+  .movie {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+  }
+
+  .movie h2 {
+    font-size: 1.5rem;
+  }
+
+  .movie h3 {
+    font-size: 0.8rem;
+  }
+}
