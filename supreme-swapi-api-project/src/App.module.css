@@ -97,3 +97,63 @@ button:active {
   background-color: #EC9F05;
   border-color: #EC9F05;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .clickableLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navlinks a {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .main-image {
+    height: 20rem;
+  }
+
+  button {
+    width: 7rem;
+    height: 2.5rem;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .clickableLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navlinks a {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .main-image {
+    height: 15rem;
+  }
+
+  button {
+    width: 6rem;
+    height: 2.2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
